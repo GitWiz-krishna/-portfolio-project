@@ -16,28 +16,34 @@
       html {
         scroll-behavior: smooth;
       }
+
       body {
         font-family: "Segoe UI", sans-serif;
         background: #f4f4f4;
         color: #333;
         padding-top: 70px;
       }
+
       nav {
         background-color: #ffffff;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       }
+
       .navbar-brand {
         font-weight: bold;
         color: #5e17eb !important;
       }
+
       .nav-link {
         color: #333 !important;
         font-weight: 500;
       }
+
       .nav-link.active,
       .nav-link:hover {
         color: #5e17eb !important;
       }
+
       .hero {
         min-height: 100vh;
         padding: 100px 20px 60px;
@@ -45,14 +51,18 @@
         align-items: center;
         text-align: center;
         background: #ffffff;
+        flex-direction: column;
       }
+
       .hero h1 {
         font-size: 3rem;
         font-weight: bold;
       }
+
       .hero span {
         color: #5e17eb;
       }
+
       .btn-custom {
         background-color: #5e17eb;
         color: white;
@@ -60,58 +70,214 @@
         padding: 10px 25px;
         margin-top: 20px;
       }
+
       .social-icons a {
         color: #5e17eb;
         font-size: 20px;
         margin: 0 10px;
       }
-      .hero img {
-        max-width: 200px;
-        border-radius: 50%;
-        margin-top: 30px;
-      }
+
       footer {
         background-color: #f1f1f1;
         text-align: center;
         padding: 20px 0;
         font-size: 14px;
         color: #777;
+      } /* Image Styling */
+      .clean-profile-pic {
+        display: block;
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+        object-fit: contain;
+        margin: 0 auto;
+        padding: 0;
+        border: 4px solid #5e17eb;
+        border-radius: 12px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
-      .clean-profile-ring {
-    width: 280px;
-    height: 280px;
-    border-radius: 50%;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* subtle 3D look */
-  }
 
-  .clean-profile-pic {
-    width: 240px;
-    height: 240px;
-    border-radius: 50%;
-    object-fit: cover;
-    background: #fff;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06); /* image shadow */
-    transition: transform 0.3s ease;
-  }
+      /* Image Hover Effect */
+      .clean-profile-ring:hover .clean-profile-pic {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(94, 23, 235, 0.25); /* Purple glow */
+      }
 
-  .clean-profile-ring:hover .clean-profile-pic {
-    transform: scale(1.04);
-  }
+      /* Text Hover Effects */
+      .hero-text-box h1 span,
+      .hero-text-box p.lead {
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
 
-  @media (max-width: 576px) {
-    .clean-profile-ring {
-      width: 220px;
-      height: 220px;
-    }
-    .clean-profile-pic {
-      width: 180px;
-      height: 180px;
-    }
-  }
+      /* Hover on text block */
+      .hero-text-box:hover h1 span {
+        color: #0e8ef6;
+        transform: scale(1.02);
+      }
+
+      .hero-text-box:hover p.lead {
+        color: #0e8ef6;
+        transform: scale(1.02);
+      }
+
+      @media (max-width: 768px) {
+        .clean-profile-pic {
+          max-width: 90vw;
+        }
+      }
+      .social-icons a {
+        color: #5e17eb;
+        font-size: 20px;
+        margin: 0 10px;
+        transition: color 0.25s ease, transform 0.25s ease;
+      }
+
+      .social-icons a:hover {
+        color: #0e8ef6; /* slightly darker purple */
+        transform: scale(1.08); /* slight zoom on hover */
+      }
+
+      .about-container {
+        border: 2px solid transparent;
+        border-radius: 16px;
+        padding: 40px;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .about-container:hover {
+        border-color: #5e17eb;
+        box-shadow: 0 8px 24px rgba(94, 23, 235, 0.15);
+      }
+      .skill-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 30px 15px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(94, 23, 235, 0.05);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(94, 23, 235, 0.15);
+  border-color: #5e17eb;
+}
+
+.skill-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #5e17eb;
+  text-shadow: 0 0 6px rgba(94, 23, 235, 0.4);
+}
+
+.skill-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}
+.project-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(94, 23, 235, 0.05);
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  height: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(94, 23, 235, 0.15);
+  border-color: #5e17eb;
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card h5 {
+  color: #0d6efd;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.project-card .badge {
+  font-size: 0.8rem;
+  padding: 6px 10px;
+  border-radius: 8px;
+  margin-right: 6px;
+}
+.contact-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 25px rgba(94, 23, 235, 0.05);
+  border: 2px solid transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(94, 23, 235, 0.12);
+  border-color: #5e17eb;
+}
+
+.contact-card h3 {
+  color: #5e17eb;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.contact-card .form-control {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: none;
+}
+
+.contact-card .form-control:focus {
+  border-color: #5e17eb;
+  box-shadow: 0 0 0 0.15rem rgba(94, 23, 235, 0.25);
+}
+
+.contact-card .btn-custom {
+  background-color: #5e17eb;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 25px;
+  transition: background 0.3s ease;
+}
+
+.contact-card .btn-custom:hover {
+  background-color: #3b0fcc;
+}
+#contact form input,
+#contact form textarea {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: border 0.3s ease;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+  border-color: #5e17eb;
+  box-shadow: 0 0 5px rgba(94, 23, 235, 0.3);
+}
+
+#contact form button:hover {
+  background-color: #4b13c2;
+}
+
+
+
     </style>
   </head>
   <body
@@ -157,44 +323,57 @@
     <!-- Hero Section -->
     <section id="home" class="hero container-fluid">
       <div class="row w-100">
+        <!-- Text Column -->
         <div
-          class="col-md-6 d-flex flex-column justify-content-center align-items-start ps-5"
+          class="col-md-6 d-flex flex-column justify-content-center align-items-start ps-5 hero-text-box"
         >
           <h1>Hello, I'm <span>Krishna Kumar</span></h1>
           <p class="lead">Aspiring Java Full Stack Developer</p>
           <a href="resume.pdf" target="_blank" class="btn btn-custom mt-3"
             >View Resume</a
           >
+
           <div class="social-icons mt-3">
             <a
               href="https://www.linkedin.com/in/krishnakumar2123-tech"
               target="_blank"
-              ><i class="fab fa-linkedin fa-2x"></i
-            ></a>
-            <a href="https://github.com/GitWiz-krishna" target="_blank"
-              ><i class="fab fa-github fa-2x"></i
-            ></a>
-            <a href="https://www.instagram.com/_ranjith__krish/" target="_blank"
-              ><i class="fab fa-instagram fa-2x"></i
-            ></a>
-            <a href="mailto:krishnakumar.r2123@gmail.com" target="_blank"
-              ><i class="fas fa-envelope fa-2x"></i
-            ></a>
-            <a href="tel:+916374913964"><i class="fas fa-phone fa-2x"></i></a>
+            >
+              <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="https://github.com/GitWiz-krishna" target="_blank">
+              <i class="fab fa-github fa-2x"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/_ranjith__krish/"
+              target="_blank"
+            >
+              <i class="fab fa-instagram fa-2x"></i>
+            </a>
+            <a href="mailto:krishnakumar.r2123@gmail.com" target="_blank">
+              <i class="fas fa-envelope fa-2x"></i>
+            </a>
+            <a href="tel:+916374913964">
+              <i class="fas fa-phone fa-2x"></i>
+            </a>
           </div>
         </div>
+
+        <!-- Image Column -->
         <div class="col-md-6 d-flex justify-content-center align-items-center">
-  <div class="clean-profile-ring">
-    <img src="image.png" alt="Krishna Kumar" class="clean-profile-pic" />
-  </div>
-</div>
+          <div class="clean-profile-ring">
+            <img
+              src="image.jpg"
+              alt="Krishna Kumar"
+              class="clean-profile-pic"
+            />
+          </div>
         </div>
       </div>
     </section>
 
     <!-- About Section with Inline Styles -->
     <section id="about" style="padding: 80px 20px; background: #f7f8fc">
-      <div class="container">
+      <div class="container about-container">
         <h2
           style="
             font-size: 2.6rem;
@@ -281,615 +460,245 @@
     </section>
 
     <!-- Skills Section with Inline CSS -->
-    <section
-      id="skills"
-      style="
-        padding: 60px 30px;
-        background: linear-gradient(120deg, #ffffff, #f6f3ff);
-      "
-    >
-      <div class="container">
+    <section id="skills" style="padding: 80px 20px; background: #ffffff">
+      <div class="container skills-container">
         <h2
           style="
-            font-size: 2.8rem;
+            font-size: 2.6rem;
             font-weight: 700;
             text-align: center;
             margin-bottom: 50px;
-            background: -webkit-linear-gradient(#5e17eb, #9c4eff);
+            background: linear-gradient(to right, #5e17eb, #9c4eff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 1px 1px 0 #e6dbff;
           "
         >
           My Skills
         </h2>
         <div class="row g-4">
-          <div class="col-6 col-md-3">
-            <div
-              style="
-                background: rgba(255, 255, 255, 0.9);
-                border-radius: 15px;
-                padding: 30px 15px;
-                text-align: center;
-                box-shadow: 0 10px 25px rgba(94, 23, 235, 0.05);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                backdrop-filter: blur(10px);
-              "
-              onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 30px rgba(94, 23, 235, 0.15)';"
-              onmouseout="this.style.transform='none'; this.style.boxShadow='0 10px 25px rgba(94, 23, 235, 0.05)';"
-            >
-              <i
-                class="fab fa-html5"
-                style="
-                  font-size: 40px;
-                  margin-bottom: 15px;
-                  color: #5e17eb;
-                  text-shadow: 0 0 6px rgba(94, 23, 235, 0.4);
-                "
-              ></i>
-              <div style="font-size: 1.1rem; font-weight: 500; color: #333">
-                HTML
-              </div>
-            </div>
-          </div>
+  <div class="col-6 col-md-3">
+    <div class="skill-card text-center">
+      <i class="fab fa-html5 skill-icon"></i>
+      <div class="skill-name">HTML</div>
+    </div>
+  </div>
 
-          <div class="col-6 col-md-3">
-            <div
-              style="
-                background: rgba(255, 255, 255, 0.9);
-                border-radius: 15px;
-                padding: 30px 15px;
-                text-align: center;
-                box-shadow: 0 10px 25px rgba(94, 23, 235, 0.05);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                backdrop-filter: blur(10px);
-              "
-              onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 30px rgba(94, 23, 235, 0.15)';"
-              onmouseout="this.style.transform='none'; this.style.boxShadow='0 10px 25px rgba(94, 23, 235, 0.05)';"
-            >
-              <i
-                class="fab fa-css3-alt"
-                style="
-                  font-size: 40px;
-                  margin-bottom: 15px;
-                  color: #5e17eb;
-                  text-shadow: 0 0 6px rgba(94, 23, 235, 0.4);
-                "
-              ></i>
-              <div style="font-size: 1.1rem; font-weight: 500; color: #333">
-                CSS
-              </div>
-            </div>
-          </div>
+  <div class="col-6 col-md-3">
+    <div class="skill-card text-center">
+      <i class="fab fa-css3-alt skill-icon"></i>
+      <div class="skill-name">CSS</div>
+    </div>
+  </div>
 
-          <div class="col-6 col-md-3">
-            <div
-              style="
-                background: rgba(255, 255, 255, 0.9);
-                border-radius: 15px;
-                padding: 30px 15px;
-                text-align: center;
-                box-shadow: 0 10px 25px rgba(94, 23, 235, 0.05);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                backdrop-filter: blur(10px);
-              "
-              onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 30px rgba(94, 23, 235, 0.15)';"
-              onmouseout="this.style.transform='none'; this.style.boxShadow='0 10px 25px rgba(94, 23, 235, 0.05)';"
-            >
-              <i
-                class="fab fa-js"
-                style="
-                  font-size: 40px;
-                  margin-bottom: 15px;
-                  color: #5e17eb;
-                  text-shadow: 0 0 6px rgba(94, 23, 235, 0.4);
-                "
-              ></i>
-              <div style="font-size: 1.1rem; font-weight: 500; color: #333">
-                JavaScript
-              </div>
-            </div>
-          </div>
+  <div class="col-6 col-md-3">
+    <div class="skill-card text-center">
+      <i class="fab fa-js skill-icon"></i>
+      <div class="skill-name">JavaScript</div>
+    </div>
+  </div>
 
-          <div class="col-6 col-md-3">
-            <div
-              style="
-                background: rgba(255, 255, 255, 0.9);
-                border-radius: 15px;
-                padding: 30px 15px;
-                text-align: center;
-                box-shadow: 0 10px 25px rgba(94, 23, 235, 0.05);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                backdrop-filter: blur(10px);
-              "
-              onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 30px rgba(94, 23, 235, 0.15)';"
-              onmouseout="this.style.transform='none'; this.style.boxShadow='0 10px 25px rgba(94, 23, 235, 0.05)';"
-            >
-              <i
-                class="fab fa-java"
-                style="
-                  font-size: 40px;
-                  margin-bottom: 15px;
-                  color: #5e17eb;
-                  text-shadow: 0 0 6px rgba(94, 23, 235, 0.4);
-                "
-              ></i>
-              <div style="font-size: 1.1rem; font-weight: 500; color: #333">
-                Java
-              </div>
-            </div>
-          </div>
+  <div class="col-6 col-md-3">
+    <div class="skill-card text-center">
+      <i class="fab fa-java skill-icon"></i>
+      <div class="skill-name">Java</div>
+    </div>
+  </div>
 
-          <div class="col-6 col-md-3">
-            <div
-              style="
-                background: rgba(255, 255, 255, 0.9);
-                border-radius: 15px;
-                padding: 30px 15px;
-                text-align: center;
-                box-shadow: 0 10px 25px rgba(94, 23, 235, 0.05);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                backdrop-filter: blur(10px);
-              "
-              onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 30px rgba(94, 23, 235, 0.15)';"
-              onmouseout="this.style.transform='none'; this.style.boxShadow='0 10px 25px rgba(94, 23, 235, 0.05)';"
-            >
-              <i
-                class="fas fa-database"
-                style="
-                  font-size: 40px;
-                  margin-bottom: 15px;
-                  color: #5e17eb;
-                  text-shadow: 0 0 6px rgba(94, 23, 235, 0.4);
-                "
-              ></i>
-              <div style="font-size: 1.1rem; font-weight: 500; color: #333">
-                MySQL
-              </div>
-            </div>
-          </div>
+  <div class="col-6 col-md-3">
+    <div class="skill-card text-center">
+      <i class="fas fa-database skill-icon"></i>
+      <div class="skill-name">MySQL</div>
+    </div>
+  </div>
 
-          <div class="col-6 col-md-3">
-            <div
-              style="
-                background: rgba(255, 255, 255, 0.9);
-                border-radius: 15px;
-                padding: 30px 15px;
-                text-align: center;
-                box-shadow: 0 10px 25px rgba(94, 23, 235, 0.05);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                backdrop-filter: blur(10px);
-              "
-              onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 30px rgba(94, 23, 235, 0.15)';"
-              onmouseout="this.style.transform='none'; this.style.boxShadow='0 10px 25px rgba(94, 23, 235, 0.05)';"
-            >
-              <i
-                class="fab fa-bootstrap"
-                style="
-                  font-size: 40px;
-                  margin-bottom: 15px;
-                  color: #5e17eb;
-                  text-shadow: 0 0 6px rgba(94, 23, 235, 0.4);
-                "
-              ></i>
-              <div style="font-size: 1.1rem; font-weight: 500; color: #333">
-                Bootstrap
-              </div>
-            </div>
-          </div>
+  <div class="col-6 col-md-3">
+    <div class="skill-card text-center">
+      <i class="fab fa-bootstrap skill-icon"></i>
+      <div class="skill-name">Bootstrap</div>
+    </div>
+  </div>
 
-          <div class="col-6 col-md-3">
-            <div
-              style="
-                background: rgba(255, 255, 255, 0.9);
-                border-radius: 15px;
-                padding: 30px 15px;
-                text-align: center;
-                box-shadow: 0 10px 25px rgba(94, 23, 235, 0.05);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                backdrop-filter: blur(10px);
-              "
-              onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 30px rgba(94, 23, 235, 0.15)';"
-              onmouseout="this.style.transform='none'; this.style.boxShadow='0 10px 25px rgba(94, 23, 235, 0.05)';"
-            >
-              <i
-                class="fab fa-react"
-                style="
-                  font-size: 40px;
-                  margin-bottom: 15px;
-                  color: #5e17eb;
-                  text-shadow: 0 0 6px rgba(94, 23, 235, 0.4);
-                "
-              ></i>
-              <div style="font-size: 1.1rem; font-weight: 500; color: #333">
-                React
-              </div>
-            </div>
-          </div>
+  <div class="col-6 col-md-3">
+    <div class="skill-card text-center">
+      <i class="fab fa-react skill-icon"></i>
+      <div class="skill-name">React</div>
+    </div>
+  </div>
 
-          <div class="col-6 col-md-3">
-            <div
-              style="
-                background: rgba(255, 255, 255, 0.9);
-                border-radius: 15px;
-                padding: 30px 15px;
-                text-align: center;
-                box-shadow: 0 10px 25px rgba(94, 23, 235, 0.05);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                backdrop-filter: blur(10px);
-              "
-              onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 30px rgba(94, 23, 235, 0.15)';"
-              onmouseout="this.style.transform='none'; this.style.boxShadow='0 10px 25px rgba(94, 23, 235, 0.05)';"
-            >
-              <i
-                class="fab fa-angular"
-                style="
-                  font-size: 40px;
-                  margin-bottom: 15px;
-                  color: #5e17eb;
-                  text-shadow: 0 0 6px rgba(94, 23, 235, 0.4);
-                "
-              ></i>
-              <div style="font-size: 1.1rem; font-weight: 500; color: #333">
-                Angular
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Projects Section with Inline CSS -->
-    <section id="projects" style="padding: 60px 0; background: #f9f9f9">
-      <div class="container">
-        <h2
-          style="
-            font-size: 2.5rem;
-            font-weight: 700;
-            text-align: center;
-            margin-top: 40px;
-            margin-bottom: 50px;
-            background: -webkit-linear-gradient(#5e17eb, #9c4eff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-          "
-        >
-          🚀 My Projects
-        </h2>
-        <div class="row g-4">
-          <!-- Project 1 -->
-          <div class="col-md-6">
-            <div
-              style="
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                border-radius: 15px;
-                background: #fff;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
-                overflow: hidden;
-                height: 100%;
-              "
-              onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(94, 23, 235, 0.1)';"
-              onmouseout="this.style.transform='none'; this.style.boxShadow='0 0 10px rgba(0, 0, 0, 0.04)';"
-            >
-              <img
-                src="images/hospital.jpg"
-                alt="Hospital Project"
-                style="width: 100%; height: 200px; object-fit: cover"
-              />
-              <div style="padding: 20px">
-                <h5 style="color: #0d6efd">
-                  <i
-                    class="fas fa-hospital text-secondary"
-                    style="margin-right: 10px"
-                  ></i
-                  >Hospital Management System
-                </h5>
-                <p>
-                  Console-based application to manage patient records with CRUD
-                  functionality using JDBC.
-                </p>
-                <div style="margin-top: 15px">
-                  <span
-                    class="badge bg-secondary me-2"
-                    style="
-                      font-size: 0.8rem;
-                      padding: 6px 10px;
-                      border-radius: 8px;
-                    "
-                    >Java</span
-                  >
-                  <span
-                    class="badge bg-info text-dark me-2"
-                    style="
-                      font-size: 0.8rem;
-                      padding: 6px 10px;
-                      border-radius: 8px;
-                    "
-                    >MySQL</span
-                  >
-                  <span
-                    class="badge bg-dark"
-                    style="
-                      font-size: 0.8rem;
-                      padding: 6px 10px;
-                      border-radius: 8px;
-                    "
-                    >JDBC</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 2 -->
-          <div class="col-md-6">
-            <div
-              style="
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                border-radius: 15px;
-                background: #fff;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
-                overflow: hidden;
-                height: 100%;
-              "
-              onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(94, 23, 235, 0.1)';"
-              onmouseout="this.style.transform='none'; this.style.boxShadow='0 0 10px rgba(0, 0, 0, 0.04)';"
-            >
-              <img
-                src="images/eccomerce.jpg"
-                alt="E-Commerce Project"
-                style="width: 100%; height: 200px; object-fit: cover"
-              />
-              <div style="padding: 20px">
-                <h5 style="color: #0d6efd">
-                  <i
-                    class="fas fa-cart-shopping text-success"
-                    style="margin-right: 10px"
-                  ></i
-                  >E-Commerce Website
-                </h5>
-                <p>
-                  Fully responsive web store with cart, product filters, and
-                  admin features using React.
-                </p>
-                <a
-                  href="https://e-commerce-brown-omega.vercel.app/"
-                  target="_blank"
-                  style="
-                    display: inline-block;
-                    margin-top: 10px;
-                    font-size: 0.9rem;
-                  "
-                  class="btn btn-outline-primary btn-sm"
-                >
-                  <i class="fas fa-eye" style="margin-right: 5px"></i>View Demo
-                </a>
-                <div style="margin-top: 15px">
-                  <span
-                    class="badge bg-primary me-2"
-                    style="
-                      font-size: 0.8rem;
-                      padding: 6px 10px;
-                      border-radius: 8px;
-                    "
-                    >React.js</span
-                  >
-                  <span
-                    class="badge bg-warning text-dark me-2"
-                    style="
-                      font-size: 0.8rem;
-                      padding: 6px 10px;
-                      border-radius: 8px;
-                    "
-                    >Bootstrap</span
-                  >
-                  <span
-                    class="badge bg-info text-dark"
-                    style="
-                      font-size: 0.8rem;
-                      padding: 6px 10px;
-                      border-radius: 8px;
-                    "
-                    >Fake API</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Project 3 -->
-<div class="col-md-6">
-  <div
-    style="
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border-radius: 15px;
-      background: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
-      overflow: hidden;
-      height: 100%;
-    "
-    onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 25px rgba(94, 23, 235, 0.1)';"
-    onmouseout="this.style.transform='none'; this.style.boxShadow='0 0 10px rgba(0, 0, 0, 0.04)';"
-  >
-    <img
-      src="images/food.jpg"
-      alt="Food Order App"
-      style="width: 100%; height: 200px; object-fit: cover"
-    />
-    <div style="padding: 20px">
-      <h5 style="color: #0d6efd">
-        <i
-          class="fas fa-utensils text-danger"
-          style="margin-right: 10px"
-        ></i
-        >Food Order App
-      </h5>
-      <p>
-        Responsive food ordering website with dynamic menu, cart management,
-        scroll navigation, dark mode toggle, and localStorage support — built
-        using pure HTML, CSS, and JavaScript.
-      </p>
-      <a
-        href="https://food-order-app-delta-sandy.vercel.app/"
-        target="_blank"
-        style="display: inline-block; margin-top: 10px; font-size: 0.9rem"
-        class="btn btn-outline-primary btn-sm"
-      >
-        <i class="fas fa-eye" style="margin-right: 5px"></i>View Demo
-      </a>
-      <div style="margin-top: 15px">
-        <span
-          class="badge bg-success me-2"
-          style="
-            font-size: 0.8rem;
-            padding: 6px 10px;
-            border-radius: 8px;
-          "
-          >JavaScript</span
-        >
-        <span
-          class="badge bg-warning text-dark me-2"
-          style="
-            font-size: 0.8rem;
-            padding: 6px 10px;
-            border-radius: 8px;
-          "
-          >Bootstrap</span
-        >
-        <span
-          class="badge bg-info text-dark"
-          style="
-            font-size: 0.8rem;
-            padding: 6px 10px;
-            border-radius: 8px;
-          "
-          >LocalStorage</span
-        >
-      </div>
+  <div class="col-6 col-md-3">
+    <div class="skill-card text-center">
+      <i class="fab fa-angular skill-icon"></i>
+      <div class="skill-name">Angular</div>
     </div>
   </div>
 </div>
 
-        </div>
-      </div>
     </section>
-    <!-- Contact Section -->
-    <section
-      id="contact"
+    <!-- Projects Section with Inline CSS -->
+    <section id="projects" style="padding: 60px 0; background: #f9f9f9">
+  <div class="container">
+    <h2
       style="
-        padding: 60px 20px;
-        background: linear-gradient(135deg, #f5f5ff, #ffffff);
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 50px;
+        background: -webkit-linear-gradient(#5e17eb, #9c4eff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       "
     >
-      <div class="container">
-        <h2
-          style="
-            font-size: 3rem;
-            font-weight: bold;
-            background: linear-gradient(45deg, #5e17eb, #9c4eff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-align: center;
-            margin-bottom: 40px;
-          "
-        >
-          Get in Touch
-        </h2>
+      🚀 My Projects
+    </h2>
 
-        <div class="row justify-content-center">
-          <div class="col-lg-8 col-md-10">
-            <div
-              style="
-                background: rgba(255, 255, 255, 0.8);
-                backdrop-filter: blur(12px);
-                border-radius: 20px;
-                padding: 40px;
-                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-                transition: transform 0.3s ease;
-              "
-              onmouseover="this.style.transform='translateY(-5px)'"
-              onmouseout="this.style.transform='none'"
-            >
-              <form>
-                <div class="mb-4">
-                  <label for="name" class="form-label">Your Name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="name"
-                    placeholder="Enter your name"
-                    style="
-                      border-radius: 12px;
-                      padding: 12px 15px;
-                      font-size: 1rem;
-                      border: 1px solid #ddd;
-                    "
-                  />
-                </div>
-                <div class="mb-4">
-                  <label for="email" class="form-label">Email Address</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    placeholder="Enter your email"
-                    style="
-                      border-radius: 12px;
-                      padding: 12px 15px;
-                      font-size: 1rem;
-                      border: 1px solid #ddd;
-                    "
-                  />
-                </div>
-                <div class="mb-4">
-                  <label for="message" class="form-label">Message</label>
-                  <textarea
-                    class="form-control"
-                    id="message"
-                    rows="4"
-                    placeholder="Write your message..."
-                    style="
-                      border-radius: 12px;
-                      padding: 12px 15px;
-                      font-size: 1rem;
-                      border: 1px solid #ddd;
-                    "
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  class="btn btn-primary w-100"
-                  style="
-                    background: linear-gradient(45deg, #5e17eb, #7a2ff7);
-                    border: none;
-                    border-radius: 12px;
-                    font-size: 1.1rem;
-                    padding: 10px 0;
-                  "
-                >
-                  <i class="fas fa-paper-plane me-2"></i>Send Message
-                </button>
-              </form>
-              <hr class="my-4" />
-              <div class="text-center" style="color: #555">
-                <p>
-                  <i
-                    class="fas fa-envelope"
-                    style="color: #5e17eb; margin-right: 10px"
-                  ></i>
-                  krishnakumar.r2123@gmail.com
-                </p>
-                <p>
-                  <i
-                    class="fas fa-phone"
-                    style="color: #5e17eb; margin-right: 10px"
-                  ></i>
-                  +91 6374913964
-                </p>
-              </div>
+    <div class="row g-4">
+      <!-- Project 1 -->
+      <div class="col-md-6">
+        <div class="project-card">
+          <img src="images/hospital.jpg" alt="Hospital Project" />
+          <div style="padding: 20px">
+            <h5>
+              <i class="fas fa-hospital text-secondary me-2"></i>Hospital Management System
+            </h5>
+            <p>Console-based application to manage patient records with CRUD functionality using JDBC.</p>
+            <div class="mt-3">
+              <span class="badge bg-secondary">Java</span>
+              <span class="badge bg-info text-dark">MySQL</span>
+              <span class="badge bg-dark">JDBC</span>
             </div>
           </div>
         </div>
       </div>
-    </section>
+
+      <!-- Project 2 -->
+      <div class="col-md-6">
+        <div class="project-card">
+          <img src="images/eccomerce.jpg" alt="E-Commerce Project" />
+          <div style="padding: 20px">
+            <h5>
+              <i class="fas fa-cart-shopping text-success me-2"></i>E-Commerce Website
+            </h5>
+            <p>Fully responsive web store with cart, product filters, and admin features using React.</p>
+            <a
+              href="https://e-commerce-brown-omega.vercel.app/"
+              target="_blank"
+              class="btn btn-outline-primary btn-sm mt-2"
+            >
+              <i class="fas fa-eye me-1"></i>View Demo
+            </a>
+            <div class="mt-3">
+              <span class="badge bg-primary">React.js</span>
+              <span class="badge bg-warning text-dark">Bootstrap</span>
+              <span class="badge bg-info text-dark">Fake API</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-md-6">
+        <div class="project-card">
+          <img src="images/food.jpg" alt="Food Order App" />
+          <div style="padding: 20px">
+            <h5>
+              <i class="fas fa-utensils text-danger me-2"></i>Food Order App
+            </h5>
+            <p>
+              Responsive food ordering website with dynamic menu, cart, dark mode toggle, and localStorage support —
+              built using pure HTML, CSS, and JavaScript.
+            </p>
+            <a
+              href="https://food-order-app-delta-sandy.vercel.app/"
+              target="_blank"
+              class="btn btn-outline-primary btn-sm mt-2"
+            >
+              <i class="fas fa-eye me-1"></i>View Demo
+            </a>
+            <div class="mt-3">
+              <span class="badge bg-success">JavaScript</span>
+              <span class="badge bg-warning text-dark">Bootstrap</span>
+              <span class="badge bg-info text-dark">LocalStorage</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="padding: 70px 20px; background: #f7f8fc">
+  <div class="container">
+    <h2
+      style="
+        font-size: 2.6rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 40px;
+        background: linear-gradient(to right, #5e17eb, #9c4eff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      "
+    >
+      📬 Get in Touch
+    </h2>
+
+    <form
+      action="https://formspree.io/f/xzzvbjkp"
+      method="POST"
+      style="
+        max-width: 600px;
+        margin: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(94, 23, 235, 0.07);
+      "
+    >
+      <div class="mb-3">
+        <label for="name" class="form-label fw-semibold">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="name"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label fw-semibold">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="message" class="form-label fw-semibold">Message</label>
+        <textarea
+          class="form-control"
+          id="message"
+          name="message"
+          rows="5"
+          required
+        ></textarea>
+      </div>
+
+      <button
+        type="submit"
+        class="btn btn-custom w-100"
+        style="border-radius: 8px"
+      >
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
